@@ -4,22 +4,26 @@ import Company from './components/pages/Company'
 import Contact from './components/pages/Contact'
 import NewProject from './components/pages/NewProject'
 
+import Container from './components/layout/Container'
+
 function App() {
   return (
     <Router>
-      <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="contact">Contato</Link></li>
-            <li><Link to="company">Empresa</Link></li>
-            <li><Link to="newProject">Novo Projeto</Link></li>
-      </ul>
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="contact">Contato</Link>
+        <Link to="company">Empresa</Link>
+        <Link to="newProject">Novo Projeto</Link>
+      </div>
 
-      <Routes>
-        <Route exact path='/' element={<Home /> }></Route>
-        <Route path='/company' element={<Company />}></Route>
-        <Route path='/contact' element={<Contact />}></Route>
-        <Route path='/newProject' element={<NewProject />}></Route>
-      </Routes>
+      <Container customClass="min_height">
+        <Routes>
+          <Route exact path='/' element={<Home />}></Route>
+          <Route path='/company' element={<Company />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
+          <Route path='/newProject' element={<NewProject />}></Route>
+        </Routes>
+      </Container>
 
       <p>Footer</p>
     </Router>

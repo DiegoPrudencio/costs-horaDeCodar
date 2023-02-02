@@ -1,0 +1,20 @@
+.container {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between; /* esparça os elementos de forma igual na linha horizontal */
+    flex-wrap: wrap; /* quando o elemento filho ultrapassar 1200, nova linha */
+    margin: 0 auto; /* centralizar na tela */
+}
+
+.min_height {
+    min-height: 75%;
+}
+
+.start {
+    justify-content: flex-start; /* colocar o texto para iniciar no começo da div */
+}
+
+.column {
+    flex-direction: column;
+    justify-self: start;
+}
