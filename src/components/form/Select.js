@@ -1,16 +1,18 @@
 import styles from './Select.module.css'
 
-function Select({ text, name, option, handlerOnChange, value }) {
+function Select({ text, name, options, handlerOnChange, value }) {
 
     return (
 
         <div className={styles.form_control}>
             <label htmlFor={name}>{text}</label>
             <select name={name} id={name}>
-                <option desabled select>Selecione uma opção</option>
-                {/* <option>{option}</option>
-                onChange={handlerOnChange}
-                value={value} */}
+                <option>Selecione uma opção</option>
+                {options.map((options) => (
+                    <option value={options.id} key={options.id}>
+                        {options.name}
+                    </option>
+                ))}
             </select>
         </div>
     )
